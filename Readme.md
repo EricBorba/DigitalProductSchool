@@ -6,6 +6,7 @@ This project provides a machine learning-based application that predicts acciden
 
 - [Features](#features)
 - [Getting Started](#getting-started)
+- [Dataset Cleaning and Model Training](#datasetcleaningmodeltraining)
 - [Usage](#usage)
 - [Testing the Deployed App](#testing-the-deployed-app)
 - [Deployment](#deployment)
@@ -47,9 +48,15 @@ pip install -r requirements.txt
 docker build -t accident-predictor .
 ```
 
-### Usage 
+### Dataset Cleaning and Model Training
 
-## Run the App Locally
+The dataset cleaning and model training steps are handled in the main.ipynb Jupyter notebook. This notebook contains the entire pipeline from loading and cleaning the dataset to training the machine learning model that powers the accident prediction functionality in this app.
+
+You can open and execute the notebook in Jupyter to see how the model is trained and the dataset is preprocessed.
+
+## Usage 
+
+### Run the App Locally
 
 1. If you're running the app in a Docker container, you can start it using:
 
@@ -64,7 +71,7 @@ python app.py
 ```
 The app will be available at http://localhost:5000/.
 
-## Send a Prediction Request
+### Send a Prediction Request
 
 To get a prediction from the app, make a POST request to the /predict endpoint with the following JSON data:
 
@@ -78,7 +85,7 @@ To get a prediction from the app, make a POST request to the /predict endpoint w
 - Replace feature1, feature2, etc., with the actual features the model expects.
 - value1, value2, etc., should be the values you wish to predict on.
 
-### Testing the Deployed App
+## Testing the Deployed App
 
 Once the app is deployed, you can test the functionality by running the script in testingEndPoint.py. This script will automatically send a request to the deployed app and allow you to interact with the accident predictor.
 
@@ -89,7 +96,7 @@ python testingEndPoint.py
 ```
 It will trigger the prediction process on the deployed app and display the response.
 
-### Deployment
+## Deployment
 
 The app is deployed on Heroku using Docker. To deploy it yourself:
 
@@ -107,7 +114,7 @@ run:
 ```
 This ensures that the application will be started with gunicorn on the correct port that Heroku assigns dynamically.
 
-### Notes
+## Notes
 
 This project uses Docker to containerize the app for easy deployment and portability.
 If you'd like to run the app locally, make sure to have the correct dependencies installed.
