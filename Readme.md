@@ -48,7 +48,7 @@ pip install -r requirements.txt
 docker build -t accident-predictor .
 ```
 
-### Dataset Cleaning and Model Training
+## Dataset Cleaning and Model Training
 
 The dataset cleaning and model training steps are handled in the main.ipynb Jupyter notebook. This notebook contains the entire pipeline from loading and cleaning the dataset to training the machine learning model that powers the accident prediction functionality in this app.
 
